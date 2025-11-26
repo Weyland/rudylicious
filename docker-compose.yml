@@ -1,0 +1,7 @@
+---
+services:
+  web:
+    image: ghcr.io/weyland/rudylicious/app:latest
+    ports:
+      - "3000:3000/tcp"
+    restart: unless-stopped
