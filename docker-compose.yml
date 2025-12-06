@@ -1,7 +1,10 @@
 ---
 services:
   web:
-    image: ghcr.io/weyland/rudylicious/app:latest
-    ports:
-      - "3000:3000/tcp"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 3000/tcp
+    image: ghcr.io/weyland/rudylicious/web:latest
     restart: unless-stopped
